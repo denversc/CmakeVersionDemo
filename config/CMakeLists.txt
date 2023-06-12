@@ -4,16 +4,23 @@ configure_file(
   @ONLY
 )
 
+file(
+  GENERATE
+  OUTPUT generated_$<CONFIG>/build_type.cc
+  CONTENT [[constexpr std::string BUILD_TYPE = "$<CONFIG>"s;]]
+)
+
 add_library(
-  buildconfig
+  config
   STATIC
   version.cc
 )
 
 target_include_directories(
-  buildconfig
+  config
   PUBLIC
     include/public
   PRIVATE
     "${CMAKE_CURRENT_BINARY_DIR}/generated"
+    "${CMAKE_CURRENT_BINARY_DIR}/generated_$<CONFIG>"
 )

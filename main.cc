@@ -11,4 +11,5 @@ int main() {
   std::cout << "major: " << version.major << std::endl;
   std::cout << "minor: " << version.minor << std::endl;
   std::cout << "patch: " << version.patch << std::endl;
+  std::cout << "build_type: " << version.build_type << std::endl;
 }

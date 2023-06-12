@@ -31,7 +31,7 @@ add_compile_options(
   -Wimplicit-fallthrough # Warns when case statements fall-through. (Included with -Wextra in GCC, not in clang)
 )
 
-add_subdirectory(buildconfig)
+add_subdirectory(config)
 
 add_executable(demo main.cc)
-target_link_libraries(demo PRIVATE buildconfig)
+target_link_libraries(demo PRIVATE config)

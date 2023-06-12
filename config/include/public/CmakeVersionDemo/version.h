@@ -9,6 +9,8 @@ struct Version {
   int minor{};
   int patch{};
 
+  std::string build_type;
+
   static Version Get();
 };
 
