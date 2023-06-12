@@ -16,11 +16,12 @@ int main() {
   std::cout << "build_type: " << version.build_type << std::endl;
 
   BuildConfig build_config;
-  std::cout << "command: " << build_config.command << std::endl;
-  std::cout << "generator: " << build_config.generator << std::endl;
-  std::cout << "version: " << build_config.version << std::endl;
-  std::cout << "system: " << build_config.system << std::endl;
-  std::cout << "system_processor: " << build_config.system_processor << std::endl;
-  std::cout << "cxx_compiler_id: " << build_config.cxx_compiler_id << std::endl;
-  std::cout << "cxx_compiler_version: " << build_config.cxx_compiler_version << std::endl;
+  std::cout << "cmake_command: " << build_config.cmake_command << std::endl;
+  std::cout << "cmake_version: " << build_config.cmake_version << std::endl;
+  std::cout << "cmake_generator: " << build_config.cmake_generator << std::endl;
+  std::cout << "cmake_host_system: " << build_config.cmake_host_system << std::endl;
+  std::cout << "cmake_system: " << build_config.cmake_system << std::endl;
+  std::cout << "cmake_system_processor: " << build_config.cmake_system_processor << std::endl;
+  std::cout << "cmake_cxx_compiler_id: " << build_config.cmake_cxx_compiler_id << std::endl;
+  std::cout << "cmake_cxx_compiler_version: " << build_config.cmake_cxx_compiler_version << std::endl;
 }

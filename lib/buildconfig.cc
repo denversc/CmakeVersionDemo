@@ -12,13 +12,14 @@ namespace {
 }
 
 BuildConfig::BuildConfig() : 
-    command(CMAKE_COMMAND),
-    generator(CMAKE_GENERATOR),
-    version(CMAKE_VERSION),
-    system(CMAKE_SYSTEM),
-    system_processor(CMAKE_SYSTEM_PROCESSOR),
-    cxx_compiler_id(CMAKE_CXX_COMPILER_ID),
-    cxx_compiler_version(CMAKE_CXX_COMPILER_VERSION) {
+    cmake_command(CMAKE_COMMAND),
+    cmake_version(CMAKE_VERSION),
+    cmake_generator(CMAKE_GENERATOR),
+    cmake_host_system(CMAKE_HOST_SYSTEM),
+    cmake_system(CMAKE_SYSTEM),
+    cmake_system_processor(CMAKE_SYSTEM_PROCESSOR),
+    cmake_cxx_compiler_id(CMAKE_CXX_COMPILER_ID),
+    cmake_cxx_compiler_version(CMAKE_CXX_COMPILER_VERSION) {
 }
 
 } // namespace CmakeVersionDemo::version {
