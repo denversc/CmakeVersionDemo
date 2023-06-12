@@ -1,0 +1,4 @@
+constexpr std::string PROJECT_VERSION = "@CmakeVersionDemo_VERSION@"s;
+constexpr int PROJECT_VERSION_MAJOR = @CmakeVersionDemo_VERSION_MAJOR@;
+constexpr int PROJECT_VERSION_MINOR = @CmakeVersionDemo_VERSION_MINOR@;
+constexpr int PROJECT_VERSION_PATCH = @CmakeVersionDemo_VERSION_PATCH@;
