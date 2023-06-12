@@ -1,20 +1,21 @@
 configure_file(
-  version_constants.cc.in
-  generated/version_constants.cc
+  configure_file.cc.in
+  generated/configure_file/configure_file.cc
   @ONLY
 )
 
 file(
   GENERATE
-  OUTPUT generated_$<CONFIG>/build_type.cc
+  OUTPUT generated/build_type/$<CONFIG>/build_type.cc
   CONTENT [[
-    constexpr std::string BUILD_TYPE = "$<CONFIG>"s;
+    constexpr std::string_view BUILD_TYPE = "$<CONFIG>"sv;
   ]]
 )
 
 add_library(
   config
   STATIC
+  buildconfig.cc
   version.cc
 )
 
@@ -23,6 +24,6 @@ target_include_directories(
   PUBLIC
     include
   PRIVATE
-    "${CMAKE_CURRENT_BINARY_DIR}/generated"
-    "${CMAKE_CURRENT_BINARY_DIR}/generated_$<CONFIG>"
+    "${CMAKE_CURRENT_BINARY_DIR}/generated/configure_file"
+    "${CMAKE_CURRENT_BINARY_DIR}/generated/build_type/$<CONFIG>"
 )

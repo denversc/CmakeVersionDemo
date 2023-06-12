@@ -1,0 +1,12 @@
+constexpr std::string_view PROJECT_VERSION = "@CmakeVersionDemo_VERSION@"sv;
+constexpr int PROJECT_VERSION_MAJOR = @CmakeVersionDemo_VERSION_MAJOR@;
+constexpr int PROJECT_VERSION_MINOR = @CmakeVersionDemo_VERSION_MINOR@;
+constexpr int PROJECT_VERSION_PATCH = @CmakeVersionDemo_VERSION_PATCH@;
+
+constexpr std::string_view CMAKE_COMMAND = "@CMAKE_COMMAND@"sv;
+constexpr std::string_view CMAKE_GENERATOR = "@CMAKE_GENERATOR@"sv;
+constexpr std::string_view CMAKE_VERSION = "@CMAKE_VERSION@"sv;
+constexpr std::string_view CMAKE_SYSTEM = "@CMAKE_SYSTEM@"sv;
+constexpr std::string_view CMAKE_SYSTEM_PROCESSOR = "@CMAKE_SYSTEM_PROCESSOR@"sv;
+constexpr std::string_view CMAKE_CXX_COMPILER_ID = "@CMAKE_CXX_COMPILER_ID@"sv;
+constexpr std::string_view CMAKE_CXX_COMPILER_VERSION = "@CMAKE_CXX_COMPILER_VERSION@"sv;

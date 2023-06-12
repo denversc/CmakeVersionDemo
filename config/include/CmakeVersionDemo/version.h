@@ -3,15 +3,16 @@
 
 namespace CmakeVersionDemo::version {
 
-struct Version {
+class Version {
+ public:
+  Version();
+
   std::string full;
   int major{};
   int minor{};
   int patch{};
 
   std::string build_type;
-
-  static Version Get();
 };
 
 }
